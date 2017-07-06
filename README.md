@@ -10,9 +10,7 @@ Class for executing calls to EcomDash API
 ### How do I get set up? ###
 
 
-```
-#!php
-<?php
+```php
 require 'class.ecomdash_api.php';
 ```
 
@@ -21,9 +19,7 @@ See examples.php for full examples.
 
 Initialize:
 
-```
-#!php
-<?php
+```php
 $developer_key = 'rihfngkdhityr4re698574bfnvn'; // Subscription key from developer account
 $account_integration_key = '675037560453y0854497y58'; // The API integration key for mobile from ecomdash account
 
@@ -31,9 +27,7 @@ $ecomdash_api = new Ecomdash_API($developer_key, $account_integration_key);
 ```
 Make a simple GET call to API:
 
-```
-#!php
-<?php
+```php
 $request_method = 'GET'; // GET or POST
 $function = 'product'; // API action without the first forward flash
 $params_str = '?sku=953867384'; // Query parameters if $method is GET, Request body if $method is POST
@@ -42,9 +36,7 @@ $current_stock = $ecomdash_api->execute_action($request_method, $function, $para
 
 Make a POST call to API:
 
-```
-#!php
-<?php
+```php
 $request_method = 'POST';
 $function = 'inventory/updateQuantityOnHand';
 $payload = $inventory_to_sync_json;
